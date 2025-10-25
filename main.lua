@@ -1219,7 +1219,7 @@ local SCP1Toggle = AutoWalkTab:CreateToggle({
     CurrentValue = false,
     Callback = function(Value)
         if Value then
-            playSingleCheckpointFile("spawnpoint.json", 1)
+            playSingleCheckpointFile("spawnpoint_1.json", 1)
         else
             autoLoopEnabled = false
             isManualMode = false
@@ -1352,3 +1352,4 @@ local CP5Toggle = AutoWalkTab:CreateToggle({
 -- AUTO WALK - END
 
 -------------------------------------------------------------
+
