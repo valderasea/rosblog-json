@@ -1209,23 +1209,6 @@ local SpeedSlider = AutoWalkTab:CreateSlider({
 })
 -------------------------------------------------------------
 
------|AUTO WALK AUTO|------------------
-local Section = AutoWalkTab:CreateSection("Auto Walk Auto")
-
--- Toggle Auto Walk (Spawnpoint)
-local SCP0Toggle = AutoWalkTab:CreateToggle({
-    Name = "Auto Walk Spawnpoint",
-    CurrentValue = false,
-    Callback = function(Value)
-        if Value then
-            playSingleCheckpointFile("spawnpoint.json", 1)
-        else
-            autoLoopEnabled = false
-            isManualMode = false
-            stopPlayback()
-        end
-    end,
-})
 
 -----| MENU 3 > AUTO WALK (MANUAL) |-----
 local Section = AutoWalkTab:CreateSection("Auto Walk (Manual)")
@@ -1236,7 +1219,7 @@ local SCP1Toggle = AutoWalkTab:CreateToggle({
     CurrentValue = false,
     Callback = function(Value)
         if Value then
-            playSingleCheckpointFile("spawnpoint_1.json", 1)
+            playSingleCheckpointFile("spawnpoint.json", 1)
         else
             autoLoopEnabled = false
             isManualMode = false
@@ -1367,4 +1350,5 @@ local CP5Toggle = AutoWalkTab:CreateToggle({
 })
 -------------------------------------------------------------
 -- AUTO WALK - END
+
 -------------------------------------------------------------
